@@ -582,7 +582,7 @@ Grafiikka
 =====
 
 * R-kehitysympäristössä on monia tapoja esittää tietoja graafisessa muodossa
-* Hyviä esimerkkejä löytyy esim. tästä osoitteesta http://www.r-graph-gallery.com/
+* Hyviä esimerkkejä löytyy esim. osoitteesta http://www.r-graph-gallery.com/
 
 ```
 plot(x = pressure$temperature, y = pressure$pressure, type = "l") # Line chart. Pressure is a sample data frame embedded in R-language
