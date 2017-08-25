@@ -578,6 +578,27 @@ f3()
 [1] 2.5
 ```
 
+Grafiikka
+=====
+
+* R-kehitysympäristössä on monia tapoja esittää tietoja graafisessa muodossa
+* Hyviä esimerkkejä löytyy esim. tästä osoitteesta http://www.r-graph-gallery.com/
+
+```
+plot(x = pressure$temperature, y = pressure$pressure, type = "l") # Line chart. Pressure is a sample data frame embedded in R-language
+plot(x = pressure$temperature, y = pressure$pressure, type = "s") # Same as above but with stepped line
+lines(x = pressure$temperature, y = pressure$pressure/2, col = "red") # Add second line in the same diagram
+barplot(height = BOD$demand, names.arg = BOD$Time) # Bar diagram
+
+plot(x = mtcars$wt, y = mtcars$mpg) # Scatter plot
+hist(mtcars$mpg) # Histogram
+plot(density(mtcars$mpg)) # Density
+
+library(ggplot2) 
+qplot(x = mtcars$wt, y = mtcars$mpg) # Scatter plot version 2
+qplot(mtcars$cyl, geom = "bar") # Bar diagram version 2
+```
+
 Tiedon haku eri lähteistä
 =====
 
