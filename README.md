@@ -678,7 +678,7 @@ Azure SQL tietokanta
 
 ```
 library(RODBC) 
-my.conn.string <- "Driver={ODBC Driver 13 for SQL Server};Server=tcp:ohdlllivqt.database.windows.net,1433;Database=MyDatabaseName;Uid=MyUid;Pwd=MyPassword;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+my.conn.string <- "Driver={ODBC Driver 13 for SQL Server};Server=tcp:oghlllivqt.database.windows.net,1433;Database=MyDatabaseName;Uid=MyUid;Pwd=MyPassword;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
 my.conn <- odbcDriverConnect(my.conn.string)
 
 my.data <- sqlQuery(my.conn, "SELECT * FROM MyTable")
