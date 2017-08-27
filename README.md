@@ -5,7 +5,7 @@ R-kieli on ensisijaisesti tilastolliseen laskentaan ja grafiikan tuottamiseen ta
 
 R-kieli on open source-lisenssin alainen (GNU).
 
-R-kieli on helposti laajennettavissa ja tänä päivänä siihen on saatavilla monia tuhansia laajennuspaketteja eri tarkoituksiin.
+R-kieli on helposti laajennettavissa ja tänä päivänä siihen on saatavilla lukuisia laajennuspaketteja eri tarkoituksiin.
 
 Kehitysympäristö
 =====
@@ -43,12 +43,14 @@ Muuttujien arvon esittäminen konsolissa
 
 * Pelkkä muuttujan nimi näyttää muuttujan arvon konsolissa
 ```
+myvar <- 123
 myvar
 ---
 123
 ```
 *	Voit käyttää myös funktiota print() 
 ```
+myvar <- 123
 print(myvar)
 ---
 123
