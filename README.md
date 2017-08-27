@@ -5,7 +5,7 @@ R-kieli on ensisijaisesti tilastolliseen laskentaan ja grafiikan tuottamiseen ta
 
 R-kieli on open source-lisenssin alainen (GNU).
 
-R-kieli on helposti laajennettavissa ja tänä päivänä siihen on saatavilla lukuisia laajennuspaketteja eri tarkoituksiin.
+R-kieli on helposti laajennettavissa ja tänä päivänä siihen on saatavilla yli 10.000 laajennuspaketteja eri käyttötarkoituksiin.
 
 Kehitysympäristö
 =====
@@ -34,8 +34,10 @@ Arvon määritys muuttujalle
 -----
 
 * Arvo muuttujalle määritetään <- merkeillä. Tämä on siis vastaava kuin = merkki useissa muissa ohjelmointikielissä
+* Muuttujan nimi voi sisältää myös pisteitä. Pisteellä ei siis viitata luokan jäseniin tms. vaan kyse on pelkästään muuttujan nimestä
 ```
 myvar <- 123
+my.other.var <- "abc"
 ```
 
 Muuttujien arvon esittäminen konsolissa
@@ -402,7 +404,7 @@ jne ...
 Data framen sisällön esitys
 -----
 
-* Data framen koko sisältö voidaan tuoda samalla tavoin kuin muidenkin R muuttujien eli kirjoittamalla pelkkä data framen nimi
+* Data framen koko sisältö voidaan esittää konsolissa samalla tavoin kuin muidenkin R muuttujien eli kirjoittamalla pelkkä data framen nimi
 * Usein data framet ovat laajoja, joten on tarpeellista rajoittaa esitettävän tiedon määrää esim. käyttämällä funtiota head(), joka palauttaa jonkin verran ensimmäisiä rivejä data framesta
 
 ```
