@@ -603,6 +603,15 @@ while (counter < 5) {
   print (counter)
   counter <- counter + 1
 }
+---
+[1] 10
+[1] 25
+[1] 60
+[1] 0
+[1] 1
+[1] 2
+[1] 3
+[1] 4
 ```
 
 Ehtolauseet
@@ -616,13 +625,11 @@ repeat {
   print (counter)
   if(counter > 5) { 
 	  break # Exit loop
-  }	else {
+  } else {
     counter <- counter + 1
   }
 }
 ```
-
-
 
 Grafiikka
 =====
