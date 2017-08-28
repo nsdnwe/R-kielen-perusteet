@@ -624,7 +624,7 @@ counter <- 0
 repeat {
   print (counter)
   if(counter > 5) { 
-	  break # Exit loop
+    break # Exit loop
   } else {
     counter <- counter + 1
   }
