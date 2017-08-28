@@ -623,12 +623,17 @@ Ehtolauseet
 counter <- 0
 repeat {
   print (counter)
-  if(counter > 5) { 
+  if(counter > 2) { 
     break # Exit loop
   } else {
     counter <- counter + 1
   }
 }
+---
+[1] 0
+[1] 1
+[1] 2
+[1] 3
 ```
 
 Grafiikka
