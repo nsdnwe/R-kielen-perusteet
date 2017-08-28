@@ -561,7 +561,7 @@ Omat funktiot
 =====
 
 * Mikäli valmiista kirjastoista ei löydy tarvittavia funktiota tai muusta syystä on tarpeen tehdä omia käsittelysääntöjä, tämä on mahdollista fuktioiden avulla
-* Funktiot voivat sisältää yleisimpiä ohjelmoinnin käskyjä, kuten esim. if-else, ifelse, for, while, switch
+* Funktiot voivat sisältää yleisimpiä ohjelmoinnin käskyjä, kuten esim. if-else, for, while, switch
 * Funktion luonti tapahtuu avainsanalla function()
 
 Funktion esittely
@@ -617,7 +617,7 @@ while (counter < 5) {
 Ehtolauseet
 -----
 
-* Ehtolauseita voi toteuttaa funktiolla if() - else() ja switch()
+* Ehtolauseita voi toteuttaa funktiolla if(), else, else if() ja switch()
 
 ```
 counter <- 0
