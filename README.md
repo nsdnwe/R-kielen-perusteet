@@ -328,14 +328,14 @@ Faktorit
 =====
 
 * Faktoreja käyttämällä voi rajoittaa muuttujan mahdollisia arvoja
-* Esim. muuttujalle gender voidaan rajoittaa mahdollisiksi arjoiksi vain Male ja Female
-* Faktorit on jaettu kahteen eri tyyppiin
+* Esim. muuttujalle gender voidaan rajoittaa mahdollisiksi arvoiksi vain Male ja Female
+* Faktorit on jaettu kahteen tyyppiin
 	* Nominal categorical variables
 		* Ei tiettyä järjestystä
 		* Esim. Red, Blue, Green jne.
 	* Ordinal categorical variables
 		* Jäsenillä on järjestys, jolla voidaan jaotella tuloksia
-			* Esim. Low, Medium, High
+		* Esim. Low, Medium, High
 			
 Faktorien luonti
 -----
@@ -367,7 +367,7 @@ Data framet eli Data setit
 Data framen luonti
 -----
 
-* Uusi data frame luodaan funktiolla data.frame(), jolle annetaan parametreina eri sarakkeiden arvovektorit
+* Uusi data frame luodaan funktiolla data.frame(), jolle annetaan parametreina sarakkeiden arvovektorit
 
 ```
 vegetable <- c("Carrots", "Tomatoes")
@@ -550,7 +550,7 @@ Kirjastot (kirjastopaketit)
 * Edellä mainittujen lisäksi R-kieleen on olemassa yli 10.000 valmista open-source kirjastoa, jotka on koottu CRAN projektin alle
 * Helppo tapa etsiä haluttua kirjastoa (pakettia) CRAN:ista on käyttää MS hakusivua https://mran.microsoft.com/packages/
 * Kirjaston asennus tapahtuu funktiolla install.packages()
-* Latauksen jälkeen kirjaston käyttööotto tapahtuu funktiolla library()
+* Latauksen jälkeen kirjaston käyttöönotto tapahtuu funktiolla library()
 
 ```
 install.packages("readxl")
@@ -564,6 +564,8 @@ Omat funktiot
 * Funktiot voivat sisältää yleisimpiä ohjelmoinnin käskyjä, kuten esim. if-else, ifelse, for, while, switch
 * Funktion luonti tapahtuu avainsanalla function()
 
+Funktion esittely
+-----
 ```
 f1 <- function(a, b) {
     if (a > b) return(TRUE) else return(FALSE)
@@ -581,6 +583,46 @@ f3()
 [1] 48
 [1] 2.5
 ```
+
+Silmukat
+-----
+
+* Silmukoita voi toteuttaa funktiolla for(), while() ja repeat()
+
+```
+v1 <- c(10, 25, 60)
+
+# For
+for(item in v1) {
+  print(item)    
+}
+
+# while
+counter <- 0
+while (counter < 5) {
+  print (counter)
+  counter <- counter + 1
+}
+```
+
+Ehtolauseet
+-----
+
+* Ehtolauseita voi toteuttaa funktiolla if() - else() ja switch()
+
+```
+counter <- 0
+repeat {
+  print (counter)
+  if(counter > 5) { 
+	  break # Exit loop
+  }	else {
+    counter <- counter + 1
+  }
+}
+```
+
+
 
 Grafiikka
 =====
