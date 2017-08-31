@@ -191,13 +191,13 @@ Matriisit
 =====
 
 * Matriisi on yleensä kaksiuloitteinen taulukko, jonka elementteihin voi viitata rivi- ja sarakenumeron avulla
-* Martiisin kaikki elementit ovat samaa tietotyyppiä 
+* Matriisin kaikki elementit ovat samaa tietotyyppiä 
 
 Matriisin luonti
 -----
 
 * Uusi matriisi luodaan funktiolla matrix(), jossa on vähintään kolme argumenttia
-	* Martiisin arvot (vektori)
+	* Matriisin arvot (vektori)
 	* byrow = TRUE/FALSE (täytetäänkö matriisi "Matriisin arvot"-parametrin arvoilla rivi kerrallaan vai sarake kerrallaan)
 	* nrow = matriisin rivien määrä
 
@@ -215,7 +215,7 @@ m1
 Usean vektorin yhdistäminen matriisiksi
 -----
 
-* On mahdollista luoda matriisi useasta vektorista antamalla	matriisin luonnissa matriisin arvoiksi vektori, joka sisältää useita vektoreita
+* Matriisi voidaan luoda useasta vektorista antamalla	matriisin luonnissa matriisin arvoiksi vektori, joka sisältää useita vektoreita
 ```
 v1 <- c(10, 20)
 v2 <- c(33, 44)
