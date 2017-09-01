@@ -1,23 +1,24 @@
 R-kielen perusteet 
 ===================
 
-R-kieli on ensisijaisesti tilastolliseen laskentaan ja grafiikan tuottamiseen tarkoitettu script-ohjelmointikieli, jota käytetään paljon esim. koneoppimisjärjestelmien (machine learning) kehityksessä.
+R-kieli on ensisijaisesti tilastolliseen laskentaan ja grafiikan tuottamiseen tarkoitettu skripti-/ohjelmointikieli, jota käytetään paljon esim. koneoppimisjärjestelmien (machine learning) kehityksessä.
 
-R-kieli on open source-lisenssin alainen (GNU).
+R-kieli on avoimen lähdekoodin GNU GPL -lisenssin alainen.
 
-R-kieli on helposti laajennettavissa ja tänä päivänä siihen on saatavilla yli 10.000 laajennuspaketteja eri käyttötarkoituksiin.
+R-kieli on helposti laajennettavissa ja tänä päivänä siihen on saatavilla yli 10 000 laajennuspakettia eri käyttötarkoituksiin.
 
 Kehitysympäristö
 =====
 
-R-scriptien kehitystä voi toteuttaa mm. 
-* Rstudiolla <https://www.rstudio.com/> (Open source)
+R-skriptien kehitystä voi toteuttaa mm. 
+
+* Rstudiolla <https://www.rstudio.com/> (avointa lähdekoodia)
 * Selainympäristössä, esim. Rextester <http://rextester.com> 
 	* Valitse language-valinnasta R
 * Visual Studiolla <https://www.visualstudio.com/downloads/> 
 	* Katso lisätietoja asennuksesta <https://docs.microsoft.com/en-us/visualstudio/rtvs/installation>
 
-Tämän dokumentin esimerkit on toteutettu Rextester:illä ja **suosittelen** käyttäämään sitä harjoituksissa.
+Tämän dokumentin esimerkit on toteutettu Rextesterillä ja **suosittelen** käyttäämään sitä harjoituksissa.
 
 Yleistä
 =====
@@ -25,7 +26,7 @@ Yleistä
 Kommentointi
 -----
 
-*	Kommentit alkavat # merkillä
+*	Kommentit alkavat `#`-merkillä.
 ```
 # My comment here
 ```
@@ -33,8 +34,8 @@ Kommentointi
 Arvon määritys muuttujalle
 -----
 
-* Arvo muuttujalle määritetään <- merkeillä. Tämä on siis vastaava kuin = merkki useissa muissa ohjelmointikielissä
-* Muuttujan nimi voi sisältää myös pisteitä. Pisteellä ei siis viitata luokan jäseniin tms. vaan kyse on pelkästään muuttujan nimestä
+* Arvo muuttujalle määritetään `<-`-merkeillä. Tämä on siis vastaava kuin `=`-merkki useissa muissa ohjelmointikielissä.
+* Muuttujan nimi voi sisältää myös pisteitä. Pisteellä ei siis viitata luokan jäseniin tms., vaan kyse on pelkästään muuttujan nimestä.
 ```
 myvar <- 123
 my.other.var <- "abc"
@@ -43,14 +44,14 @@ my.other.var <- "abc"
 Muuttujien arvon esittäminen konsolissa
 -----
 
-* Pelkkä muuttujan nimi näyttää muuttujan arvon konsolissa
+* Muuttujan nimen syöttäminen näyttää sen arvon konsolissa.
 ```
 myvar <- 123
 myvar
 ---
 123
 ```
-*	Voit käyttää myös funktiota print() 
+*	Voit käyttää myös funktiota `print()`.
 ```
 myvar <- 123
 print(myvar)
@@ -61,21 +62,21 @@ print(myvar)
 Vektorit
 =====
 
-* Vektori on yksiulotteinen taulukko eli esim. numerot 1, 2, 4, 6, 8 jne.. 
-* Vektorin kaikki arvot ovat samaa tietotyyppiä eli esim. int
+* Vektori on yksiulotteinen taulukko, eli esim. numerosarja `1, 2, 4, 6, 8`.
+* Vektorin kaikki arvot ovat samaa tietotyyppiä, eli esim. kokonaislukuja (`int`).
 
 Vektorin luonti
 -----
 
-* Uusi vektorin luodaan funktiolla c(), jolle annetaan parametreina vektorin arvot
+* Uusi vektori luodaan funktiolla `c()`, jolle annetaan parametreina vektorin arvot.
 ```
 myvector <- c(1, 2, 3)
 ```
 
-Vektorien summaus, vähennys, jako ym. operaatiot
+Vektorien summaus, vähennys, jako- ym. operaatiot
 -----
 
-* Vektoreita voi laskea yhteen, vähentää ym. samalla tavoin kuin tavallisia muuttujia
+* Vektoreita voi laskea yhteen, vähentää ym. kuten tavallisia muuttujia.
 ```
 v1 <- c(1, 2, 3)
 v2 <- c(2, 4, 5)
@@ -100,8 +101,8 @@ Laskuoperaattorit
 Vektorin elementtien nimeäminen
 -----
 
-* Usein on tarpeellista antaa vektorin elementeille nimi, joka näkyy tuloksissa ja johon voidaan viitata pelkän index-numeron sijaa
-* Nimeäminen tapahtuu funktiolla names()
+* Usein on tarpeellista antaa vektorin elementeille nimet, jotka näkyvät tuloksissa ja johon voidaan viitata pelkän indeksinumeron sijaan.
+* Nimeäminen tapahtuu funktiolla `names()`.
 ```
 v1 <- c(1, 2, 3)
 names(v1) <- c("Apples", "Carrots", "Lemons")
@@ -114,8 +115,8 @@ Apples Carrots  Lemons
 Tilastofunktioita
 -----
 
-* R sisältää lukuisia tilastofunktioita ja lisämodulien kautta löytyy vielä paljon lisää
-* Yleisinpiä ovat mm. sum(), min(), max(), sd(), median(), mean()
+* R sisältää lukuisia tilastofunktioita ja lisämoduulien avulla kirjoa voi laajentaa.
+* Yleisimpiä ovat mm. `sum()`, `min()`, `max()`, `sd()`, `median()`, `mean()`.
 ```
 v1 <- c(1, 8, 17)
 sum(v1)
@@ -128,10 +129,10 @@ mean(v1)
 Viittaus vektorin jäseniin
 ---
 
-* Vektorin jäseniin voi viitata jäsenen indeksillä tai nimellä, mikäli nimi on määritettynä names() funktiolla
-* Huomaa, että indeksi alkaa arvosta 1
-* Kaksoispisteellä on mahdollista valita tietty alue indeksejä
-* Mikäli on tarve viitata useaan vektorin jäseneen, tämä on mahdollista antamalla viitattavat jäsenet omana vektorina, katso esimerkki alla
+* Vektorin jäseniin voi viitata jäsenen indeksillä tai nimellä, mikäli nimi on määritettynä `names()`-funktiolla.
+* Huomaa, että indeksit alkavat arvosta 1.
+* Kaksoispisteellä on mahdollista valita tietty alue indeksejä.
+* Mikäli on tarve viitata useaan vektorin jäseneen, tämä on mahdollista antamalla viitattavat jäsenet omana vektorina. Katso esimerkki alla.
 ```
 v1 <- c(1, 20, 17, 6)
 names(v1) <- c("Apples", "Carrots", "Lemons", "Grapes")
@@ -159,7 +160,7 @@ Apples Lemons
 Vektorien vertailu
 -----
 
-* Vektorien arvoja voi verrata yhteen muuttujan arvoon tai toiseen saman kokoiseen vektoriin
+* Vektorien arvoja voi verrata yhteen muuttujan arvoon alkioittain tai toiseen saman kokoiseen vektoriin.
 ```
 v1 <- c(1, 20, 17, 6)
 v1 > 10
@@ -174,8 +175,8 @@ v1 > v2
 Vektorin arvojen nimien haku
 -----
 
-* Yllä kuvatussa esimerkissä vastauksena tulee TRUE/FALSE vektori
-* Mikäli haluat palauttaa vain ne vektorin arvot, jotka täyttävät halutun ehdon, käytä alla kuvattua mallia
+* Yllä kuvatussa esimerkissä vastaukseksi muodostuu totuusarvoja (`TRUE`/`FALSE`) sisältävä vektori.
+* Mikäli haluat palauttaa vain ne vektorin arvot, jotka täyttävät halutun ehdon, käytä alla kuvattua mallia.
 ```
 v1 <- c(1, 20, 17, 6)
 names(v1) <- c("Apples", "Carrots", "Lemons", "Grapes")
@@ -190,16 +191,16 @@ Carrots  Lemons
 Matriisit
 =====
 
-* Matriisi on yleensä kaksiuloitteinen taulukko, jonka elementteihin voi viitata rivi- ja sarakenumeron avulla
-* Matriisin kaikki elementit ovat samaa tietotyyppiä 
+* Matriisi on yleensä kaksiulotteinen taulukko, jonka elementteihin voi viitata rivi- ja sarakenumeron avulla.
+* Matriisin kaikki elementit ovat samaa tietotyyppiä.
 
 Matriisin luonti
 -----
 
-* Uusi matriisi luodaan funktiolla matrix(), jossa on vähintään kolme argumenttia
+* Uusi matriisi luodaan funktiolla `matrix()`, jolle annetaan vähintään kolme argumenttia:
 	* Matriisin arvot (vektori)
-	* byrow = TRUE/FALSE (täytetäänkö matriisi "Matriisin arvot"-parametrin arvoilla rivi kerrallaan vai sarake kerrallaan)
-	* nrow = matriisin rivien määrä
+	* `byrow` = TRUE/FALSE (täytetäänkö matriisi "Matriisin arvot" -parametrin arvoilla rivi kerrallaan vai sarake kerrallaan)
+	* `nrow` = matriisin rivien määrä
 
 ```
 v1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9) # Same as v1 <- c(1:9)
@@ -215,7 +216,7 @@ m1
 Usean vektorin yhdistäminen matriisiksi
 -----
 
-* Matriisi voidaan luoda useasta vektorista antamalla	matriisin luonnissa matriisin arvoiksi vektori, joka sisältää useita vektoreita
+* Matriisi voidaan luoda useasta vektorista antamalla matriisin luonnissa matriisin arvoiksi vektori, joka sisältää useita vektoreita.
 ```
 v1 <- c(10, 20)
 v2 <- c(33, 44)
@@ -233,7 +234,7 @@ matrix(vv, byrow = TRUE, nrow = 3)
 Matriisin rivien ja sarakkeiden nimeäminen
 -----
 
-* Matriisin riveille ja sarakkeille voi antaa nimet samalla tavoin kuin vektorin sarakkeille eli käyttämällä funktioita colnames() ja rownames() 
+* Matriisin riveille ja sarakkeille voi antaa nimet lähes samalla tavoin kuin vektorin sarakkeille, käyttämällä funktioita `colnames()` ja `rownames()` 
 
 ```
 v1 <- c(10, 20)
@@ -257,9 +258,9 @@ m1
 Viittaus matriisin jäseniin
 ---
 
-* Matriisin jäseniin voi viitata jäsenen rivi- ja sarakenumerolla (indekseillä) tai näiden nimillä
-* Huomaa, että indeksi alkaa arvosta 1
-* Kaksoispisteellä on mahdollista valita tietty alue indeksejä
+* Matriisin jäseniin voi viitata jäsenen rivi- ja sarakenumerolla (indekseillä) tai näiden nimillä.
+* Huomaa, että indeksi alkaa arvosta 1.
+* Kaksoispisteellä on mahdollista valita tietty alue indeksejä.
 
 ```
 m1[2,2]        # Select a single element
@@ -283,7 +284,7 @@ m1[, "Apples"] # Select Apples column (note transposed result)
 Matriisin rivi- ja sarakesummat
 -----
 
-* Matriisin rivi- ja sarakkeiden summat voi laskea funktiolla rowSums() ja colSums() 
+* Matriisin rivi- ja sarakkeiden summat voi laskea funktiolla `rowSums()` ja `colSums()`.
 
 ```
 rowSums(m1)
@@ -296,10 +297,10 @@ colSums(m1)
      98     124 
 ```
 
-Rivien ja sarakkeiden lisääminen matriisin
+Rivien ja sarakkeiden lisääminen matriisiin
 -----
 
-* Uusia rivejä ja sarakkeita voi lisätä olemassa olevaan matriisiin funktiolla rBind() ja cBind() 	
+* Uusia rivejä ja sarakkeita voi lisätä olemassa olevaan matriisiin funktioilla `rBind()` ja `cBind()`.
 ```
 v1 <- c(10, 20)
 v2 <- c(33, 44)
@@ -327,8 +328,8 @@ m3
 Faktorit
 =====
 
-* Faktoreja käyttämällä voi rajoittaa muuttujan mahdollisia arvoja
-* Esim. muuttujalle gender voidaan rajoittaa mahdollisiksi arvoiksi vain Male ja Female
+* Faktoreilla voi rajoittaa muuttujan mahdollisia arvoja.
+* Esim. muuttujalle `gender` voidaan rajoittaa mahdollisiksi arvoiksi vain `Male` ja `Female`.
 * Faktorit on jaettu kahteen tyyppiin
 	* Nominal categorical variables
 		* Ei tiettyä järjestystä
@@ -340,8 +341,8 @@ Faktorit
 Faktorien luonti
 -----
 
-* Uusi faktori luodaan funktiolla factor()
-* Faktorin arvot on mahdollista luoda analysoitavasta datasta tai antamalla ohjelmallisesti
+* Uusi faktori luodaan funktiolla `factor()`.
+* Faktorin arvot on mahdollista luoda analysoitavasta datasta tai antamalla ohjelmallisesti.
 
 ```
 f1 <- factor(c("Apples", "Carrots", "Lemons", "Grapes")) # Nominal
@@ -361,13 +362,13 @@ Levels: Low < Medium < High
 Data framet eli Data setit
 =====
 
-* Data frame (Data set) on yleensä kaksiuloitteinen taulukko, jonka elementteihin voi viitata rivi- ja sarakenumeron avulla
-* Toisin kuin matriiseissa, eri sarakkeiden elementit voivat olla eri tietotyyppejä
+* Data frame (Data set) on yleensä kaksiuloitteinen taulukko, jonka elementteihin voi viitata rivi- ja sarakenumeron avulla.
+* Toisin kuin matriiseissa, eri sarakkeiden elementit voivat olla eri tietotyyppejä.
 
 Data framen luonti
 -----
 
-* Uusi data frame luodaan funktiolla data.frame(), jolle annetaan parametreina sarakkeiden arvovektorit
+* Uusi data frame luodaan funktiolla `data.frame()`, jolle annetaan parametreina sarakkeiden arvovektorit.
 
 ```
 vegetable <- c("Carrots", "Tomatoes")
@@ -379,11 +380,11 @@ data.frame(vegetable, quantity)
 2  Tomatoes      432
 ```
 
-Malli data framet
+Malli- data framet
 -----
 
-* R-kieli sisältää valmiina useita malli data frameja, joita käytetään mm. harjoituksissa ja demoissa
-* Lista käytettävissä olevista malli data frameista on listattavissa funktiolla data()
+* R-kieli sisältää valmiina useita malli- data frameja, joita käytetään mm. harjoituksissa ja demoissa.
+* Lista käytettävissä olevista malli- data frameista on listattavissa funktiolla `data()`
 
 ```
 data()
@@ -404,14 +405,14 @@ jne ...
 Data framen sisällön esitys
 -----
 
-* Data framen koko sisältö voidaan esittää konsolissa samalla tavoin kuin muidenkin R muuttujien eli kirjoittamalla pelkkä data framen nimi
-* Usein data framet ovat laajoja, joten on tarpeellista rajoittaa esitettävän tiedon määrää esim. käyttämällä funtiota head(), joka palauttaa jonkin verran ensimmäisiä rivejä data framesta
+* Data framen koko sisältö voidaan esittää konsolissa samalla tavoin kuin muidenkin R-muuttujien eli syöttämällä pelkkä data framen nimi.
+* Usein data framet ovat laajoja, joten on tarpeellista rajoittaa esitettävän tiedon määrää esim. käyttämällä funktiota `head()`, joka palauttaa jonkin verran ensimmäisiä rivejä data framesta.
 
 ```
-head(mtcars) # mtcars is a sample data frame embedded in R-language
+head(mtcars) # mtcars is a sample data frame embedded in the R language
 ```
 
-* Data framen rakenteen kuvauksen voi tuoda funtiolla str()
+* Data framen rakenteen voi kuvailla funktiolla `str()`.
 
 ```
 str(mtcars)
@@ -422,7 +423,7 @@ str(mtcars)
  $ disp: num  160 160 108 258 360 ...
 ```
 
-* Yhteenvedon data framen sarakkeista voi tuoda funktiolla summary()
+* Yhteenvedon data framen sarakkeista saa funktiolla `summary()`.
 
 ```
 summary(mtcars)
@@ -442,35 +443,35 @@ jne...
 Viittaus data framen jäseniin
 ---
 
-* Data framen jäseniin voi viitata jäsenen rivi- ja sarakenumerolla (indekseillä) tai näiden nimillä
-* Kaksoispisteellä on mahdollista valita tietty alue indeksejä
+* Data framen jäseniin voi viitata jäsenen rivi- ja sarakenumerolla (indekseillä) tai näiden nimillä.
+* Kaksoispisteellä on mahdollista valita tietty alue indeksejä.
 
 ```
 mtcars[1:3, "cyl"] # Rows 1 to 3 of column cyl
 mtcars[, "cyl"] # Whole single column of data (transposed)
 ```
 
-* Koko sarakkeeseen voi viitata myös $-merkillä
+* Koko sarakkeeseen voi viitata myös $-merkillä.
 
 ```
 mtcars$cyl  # Same as mtcars[, "cyl"]
 ```
 
-Data framen filtteröinti
+Data framen suodattaminen (filtteröinti)
 -----
 
-* Filtteröimällä data framesta voidaan luoda uusi data frame, jossa on vain osa alkuperäisen data framen tiedoista. Tämä tapahtuu funktiolla subset()
+* Suodattamalla data framesta voidaan luoda uusi data frame, jossa on vain osa alkuperäisen data framen tiedoista. Tämä tapahtuu funktiolla `subset()`.
 
 ```
 subset(mtcars, cyl == 4 & gear == 4)
 ```
 
-* Loogiset operaattorit, joita filtteröinnin ehdoissa voi käyttää
-	* & = AND
-	* | = OR
-	* ! = NOT
+* Loogiset operaattorit, joita filtteröinnin ehdoissa voi käyttää ovat
+	* & = ja
+	* | = tai
+	* ! = ei
 
-* Subset:iin on mahdollista valita vain osa alkuperäisen data framen sarakkeista select = parametrin avulla
+* Suodatettuun data frameen on mahdollista valita vain osa alkuperäisen data framen sarakkeista `select =` -parametrin avulla.
 
 ```
 subset(mtcars, cyl == 4 & gear == 4, select = mpg:disp) # Only columns from mpg to disp
@@ -479,14 +480,14 @@ subset(mtcars, cyl == 4 & gear == 4, select = mpg:disp) # Only columns from mpg 
 Data framen järjestäminen
 -----
 
-* Data framen tiedot voi järjestää  funktiolla order()
-* Order() palauttaa vain indeksi-vektorin, joten varsinainen järjestetty data frame täytyy luoda uudelleen indeksi-vektorin avulla
+* Data framen tiedot voi järjestää funktiolla `order()`.
+* `order()` palauttaa vain indeksivektorin, joten varsinainen järjestetty data frame täytyy luoda uudelleen indeksi-vektorin avulla.
 
 ```
 mtcars[order(mtcars$disp),] # Order by disp-column
 ```
 
-* Käänteinen tulosjärjestys on mahdollista valita parametrilla decreasing=TRUE 
+* Käänteinen tulosjärjestys on mahdollista valita parametrilla `decreasing=TRUE`.
 
 ```
 mtcars[order(mtcars$disp, decreasing=TRUE),]
@@ -495,12 +496,12 @@ mtcars[order(mtcars$disp, decreasing=TRUE),]
 Listat
 =====
 
-* Lista on vektori, jonka jäsenet voivat olla eri tietytyyppejä
+* Lista on vektori, jonka jäsenet voivat olla eri tietotyyppejä
 
 Listan luonti
 -----
 
-* Uusi lista luodaan funktiolla list(), jolle annetaan parametreina listan jäsenet vastaavalla tavalla kuin vektorin luonnissa
+* Uusi lista luodaan funktiolla `list()`, jolle annetaan parametreina listan jäsenet vastaavalla tavalla kuin vektorin luonnissa.
 
 ```
 v1 = c(123, 456)
@@ -524,7 +525,7 @@ l1
 Viittaus listan jäseniin
 -----
 
-* Listan jäseniin voi viitata jäsenen indeksinumerolla, muuttujan nimellä tai annetulla nimellä
+* Listan jäseniin voi viitata jäsenen indeksinumerolla, muuttujan nimellä tai annetulla nimellä.
 
 ```
 v1 = c(123, 456)
@@ -543,14 +544,14 @@ $my.vec
 Kirjastot (kirjastopaketit)
 =====
 
-* R-kehitysympäristö sisältää yleensä useita valmiita kirjastoja
-* Listan käytettävissä olevista kirjastoista voi hakea funktiolla library() 
-* Kirjaston voi ottaa käyttöön funktiolla library("Kirjaston nimi")
-* Lista niistä kirjastoista, jotka ovat jo käytössä (eli ei tarvitse erikseen ottaa käyttöön funktiolla library()), saa fuktiolla search()
-* Edellä mainittujen lisäksi R-kieleen on olemassa yli 10.000 valmista open-source kirjastoa, jotka on koottu CRAN projektin alle
-* Helppo tapa etsiä haluttua kirjastoa (pakettia) CRAN:ista on käyttää MS hakusivua https://mran.microsoft.com/packages/
-* Kirjaston asennus tapahtuu funktiolla install.packages()
-* Latauksen jälkeen kirjaston käyttöönotto tapahtuu funktiolla library()
+* R-kehitysympäristö sisältää yleensä useita valmiita kirjastoja.
+* Listan käytettävissä olevista kirjastoista voi hakea funktiolla `library()`.
+* Kirjaston voi ottaa käyttöön funktiolla `library("Kirjaston nimi")`.
+* Lista niistä kirjastoista, jotka ovat jo käytössä (eli joita ei tarvitse erikseen ottaa käyttöön funktiolla `library()`) saa funktiolla `search()`
+* Edellä mainittujen lisäksi R-kieleen on olemassa yli 10 000 valmista avoimen lähdekoodin kirjastoa, jotka on koottu CRAN-projektiin.
+* Helppo tapa etsiä haluttua kirjastoa (pakettia) CRAN:ista on käyttää hakusivua https://mran.microsoft.com/packages/
+* Kirjaston asennus tapahtuu funktiolla `install.packages()`.
+* Latauksen jälkeen kirjaston käyttöönotto tapahtuu funktiolla `library()`.
 
 ```
 install.packages("readxl")
@@ -560,9 +561,9 @@ library("readxl")
 Omat funktiot
 =====
 
-* Mikäli valmiista kirjastoista ei löydy tarvittavia funktiota tai muusta syystä on tarpeen tehdä omia käsittelysääntöjä, tämä on mahdollista fuktioiden avulla
-* Funktiot voivat sisältää yleisimpiä ohjelmoinnin käskyjä, kuten esim. if-else, for, while, switch
-* Funktion luonti tapahtuu avainsanalla function()
+* Mikäli valmiista kirjastoista ei löydy tarvittavia funktiota tai muusta syystä on tarpeen tehdä omia käsittelysääntöjä, tämä on mahdollista funktioiden avulla
+* Funktiot voivat sisältää yleisimpiä ohjelmoinnin käskyjä, kuten esim. `if`/`else`, `for`, `while`, `switch`
+* Funktion määrittely tapahtuu avainsanalla `function()`.
 
 Funktion esittely
 -----
@@ -587,7 +588,7 @@ f3()
 Silmukat
 -----
 
-* Silmukoita voi toteuttaa funktiolla for(), while() ja repeat()
+* Silmukoita voi toteuttaa avainsanoilla `for()`, `while()` ja `repeat()`.
 
 ```
 v1 <- c(10, 25, 60)
@@ -617,7 +618,7 @@ while (counter < 5) {
 Ehtolauseet
 -----
 
-* Ehtolauseita voi toteuttaa funktiolla if(), else, else if() ja switch()
+* Ehtolauseita voi toteuttaa avainsanoilla `if()`, `else`, `else if()` ja `switch()`.
 
 ```
 counter <- 0
@@ -639,7 +640,7 @@ repeat {
 Grafiikka
 =====
 
-* R-kehitysympäristössä on monia tapoja esittää tietoja graafisessa muodossa
+* R-kehitysympäristössä on monia tapoja esittää tietoja graafisessa muodossa.
 * Hyviä esimerkkejä löytyy esim. osoitteesta http://www.r-graph-gallery.com/
 
 ```
@@ -658,13 +659,13 @@ qplot(mtcars$cyl, geom = "bar") # Bar diagram version 2
 Tiedon haku eri lähteistä
 =====
 
-* Käsiteltävää tietoa on mahdollista hakea mm. tekstitiedostoista, Excel-tiedostoista, Rest-rajapinnasta ja eri tietokannoista
-* Alla on kuvattuna muutamia esimerkkejä. Eri tietokannoista / järjestelmistä tietojen hakuun kannattaa etsiä tietoa tapauskohtaisesti 
+* Käsiteltävää tietoa on mahdollista hakea mm. tekstitiedostoista, Excel-tiedostoista, REST-rajapinnoista ja eri tietokannoista.
+* Alla on kuvattuna muutamia esimerkkejä. Eri tietokannoista tai muista järjestelmistä tietojen hakuun kannattaa etsiä tietoa tapauskohtaisesti.
 
 Tekstitiedostot
 -----
 
-* CVS muotoisia tekstitiedostoja voi lukea data frame muotoon funktiolla read.cvs()
+* CSV-muotoisia (pilkuin erotellut rivit) tekstitiedostoja voi lukea data frame -muotoon funktiolla `read.csv()`.
 
 ```
 Esimerkkitiedoston c:\mydata.txt sisältö
@@ -688,7 +689,7 @@ mydata
 Excel-tiedostot
 ----
 
-* Excel tiedostoja voi lukea data frame muotoon esim. readxl kirjaston avulla
+* Excel-tiedostoja voi lukea data frame -muotoon esim. `readxl`-kirjaston avulla.
 
 ```
 install.packages("readxl")
@@ -699,7 +700,7 @@ mydata <- read_excel("c:\\testing\\mydata.xlsx")
 Rest-rajapinta
 -----
 
-* Rest-rajapinnasta voi lukea JSON-muotoista tietoa esim. jsonlite kirjaston avulla
+* REST-rajapinnoista voi lukea JSON-muotoista tietoa esim. `jsonlite`-kirjaston avulla.
 
 ```
 library(jsonlite)
@@ -707,10 +708,10 @@ mydata <- fromJSON("http://services.groupkt.com/country/search?text=un", flatten
 head(mydata)
 ```
 
-Paikallinen MySQL tietokanta
+Paikallinen MySQL-tietokanta
 -----
 
-* Yhteyden muodostus MySQL tietokantaan tapahtuu RMySQL kirjaston avulla
+* Yhteyden muodostus MySQL-tietokantaan tapahtuu `RMySQL`-kirjaston avulla.
 
 ```
 install.packages("RMySQL")
@@ -722,13 +723,14 @@ my.data <- fetch(result, n = 5)
 head(my.data)
 ```
 
-Azure SQL tietokanta
+Azure SQL -tietokanta
 -----
 
-* Yhteyden muodostus Azure SQL tietokantaan tapahtuu RODBC kirjaston avulla seuraavasti
-* Avaa Azure portal ja valitse tietokanta, johon haluat luoda yhteyden
-* Jotta kehitystyöasemasta voi ottaa yhteyden Azure SQL tietokantaan, varmista että "Set server firewall" kohdassa on mukana kehitystyöaseman IP-osoite
-* Valitse linkki "Show database connection strings" ja kopioi ODBC yhteyslause esim. alla näkyvän esimerkin my.conn.string muuttujaan. Korjaa salasana.
+Yhteyden muodostus Azure SQL tietokantaan tapahtuu `RODBC`-kirjaston avulla seuraavasti:
+
+* Avaa Azure Portal ja valitse tietokanta, johon haluat luoda yhteyden
+* Jotta kehitystyöasemasta voi ottaa yhteyden Azure SQL -tietokantaan, varmista että "Set server firewall" -kohdassa on mukana kehitystyöaseman IP-osoite
+* Valitse linkki "Show database connection strings" ja kopioi ODBC-yhteyslause esim. alla näkyvän esimerkin `my.conn.string`-muuttujaan. Korjaa salasana.
 
 ```
 library(RODBC) 
