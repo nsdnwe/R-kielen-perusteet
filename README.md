@@ -637,6 +637,46 @@ repeat {
 [1] 3
 ```
 
+Tietotyypit
+=====
+
+* R-kielen perustietytyyppejä ovat:
+  * Looginen (Boolean).
+		* `v <- TRUE` 
+	* Merkkijono (Character).
+		* `v <-	"ABC"
+	* Desimaaliluku (Numeric).
+		* `v <- 12.3`
+	* Kokonaisluku (Integer).
+		* `v <- 123L`
+	* Kompleksiluku (Complex).
+		* `v <- 1.23+2i`
+
+Tietotyyppien muunnos
+-----
+
+* Tietotyyppejä voi muuntaa `as.`-alkuisilla funktiolla, joita ovat `as.numeric()`, `as.logical()`, `as.integer()`, `as.factor()`, `as.character()` ja `as.ordered()`.
+
+```
+as.numeric(c("3", "4abc5", "6,0", "7.0"))
+---
+[1] 3 NA NA  7
+Warning message:
+NAs introduced by coercion
+```
+
+Tietotyypin tarkastus
+-----
+
+* Muuttujan tietotyypin voi tarkastaa funktiolla `class()`.
+
+```
+v <- 123L
+class(v)
+---
+[1] "integer"
+```
+
 Grafiikka
 =====
 
