@@ -642,15 +642,15 @@ Tietotyypit
 
 * R-kielen perustietytyyppejä ovat:
   * Looginen (Boolean).
-    `v <- TRUE` 
+    * `v <- TRUE` 
   * Merkkijono (Character).
-    `v <-	"ABC"
+    * `v <-	"ABC"`
   * Desimaaliluku (Numeric).
-    `v <- 12.3`
+    * `v <- 12.3`
   * Kokonaisluku (Integer).
-    `v <- 123L`
+    * `v <- 123L`
   * Kompleksiluku (Complex).
-    `v <- 1.23+2i`
+    * `v <- 1.23+2i`
 
 Tietotyyppien muunnos
 -----
