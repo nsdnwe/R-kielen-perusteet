@@ -152,9 +152,7 @@ Carrots  Grapes
       1      20      17 
 Apples Lemons 
      1     17 
-  name quantity
-1 Cats      123
-2 Dogs      432
+
 ```
 
 Vektorien vertailu
@@ -700,7 +698,7 @@ Tiedon haku eri lähteistä
 =====
 
 * Käsiteltävää tietoa on mahdollista hakea mm. tekstitiedostoista, Excel-tiedostoista, REST-rajapinnoista ja eri tietokannoista.
-* Alla on kuvattuna muutamia esimerkkejä. Eri tietokannoista tai muista järjestelmistä tietojen hakuun kannattaa etsiä tietoa tapauskohtaisesti.
+* Alla on kuvattuna muutamia esimerkkejä. Ohjeita tietojen hakuun eri tyyppisistä tietokannoista ja ulkoisista järjestelmistä kannattaa etsiä Googlella tapauskohtaisesti.
 
 Tekstitiedostot
 -----
@@ -774,7 +772,7 @@ Yhteyden muodostus Azure SQL tietokantaan tapahtuu `RODBC`-kirjaston avulla seur
 
 ```
 library(RODBC) 
-my.conn.string <- "Driver={ODBC Driver 13 for SQL Server};Server=tcp:oghlllivqt.database.windows.net,1433;Database=MyDatabaseName;Uid=MyUid;Pwd=MyPassword;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+my.conn.string <- "Driver={ODBC Driver 13 for SQL Server};Server=tcp:lohllivqt.database.windows.net,1433;Database=MyDatabaseName;Uid=MyUid;Pwd=MyPassword;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
 my.conn <- odbcDriverConnect(my.conn.string)
 
 my.data <- sqlQuery(my.conn, "SELECT * FROM MyTable")
